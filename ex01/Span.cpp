@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:08:08 by julcalde          #+#    #+#             */
-/*   Updated: 2025/10/27 21:07:56 by julcalde         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:26:08 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,14 @@ void Span::addNumber(int num)
 /*
 	addNumber (template): Adds a range of numbers to the Span.
 */
-template <typename Iter>
-void Span::addNumber(Iter begin, Iter end)
-{
-	size_t count = std::distance(begin, end);
-	if (_numbers.size() + count > _maxSiza)
-		throw std::runtime_error("Max capacity exceeded");
-	_numbers.insert(_numbers.end(), begin, end);
-}
+// template <typename Iterator>
+// void Span::addNumber(Iterator begin, Iterator end)
+// {
+// 	size_t count = std::distance(begin, end);
+// 	if (_numbers.size() + count > _maxSize)
+// 		throw std::runtime_error("Max capacity exceeded");
+// 	_numbers.insert(_numbers.end(), begin, end);
+// }
 
 /*
 	shortestSpan: Finds the shortest span (or distance) between any two numbers in the Span.
