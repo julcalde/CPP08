@@ -1,4 +1,4 @@
-NAME =		Span
+NAME =		span
 
 CXX =		c++
 
