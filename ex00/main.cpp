@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:44:03 by julcalde          #+#    #+#             */
-/*   Updated: 2025/10/27 14:50:29 by julcalde         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:53:40 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+
+	
 	return (0);
 }
