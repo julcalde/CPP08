@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:08:06 by julcalde          #+#    #+#             */
-/*   Updated: 2025/10/27 15:19:33 by julcalde         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:26:50 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,15 @@ class Span
 		~Span();
 
 		void addNumber(int num);
-		template <typename Iter>
-		void addNumber(Iter begin, Iter end);
+		/* addNumber (template): Adds a range of numbers to the Span.*/
+		template <typename Iterator>
+		void addNumber(Iterator begin, Iterator end)
+		{
+			size_t count = std::distance(begin, end);
+			if (_numbers.size() + count > _maxSize)
+				throw std::runtime_error("Max capacity exceeded");
+			_numbers.insert(_numbers.end(), begin, end);
+		}
 		int shortestSpan() const;
 		int longestSpan() const;
 };
