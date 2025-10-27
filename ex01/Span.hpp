@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:08:06 by julcalde          #+#    #+#             */
-/*   Updated: 2025/10/27 15:12:49 by julcalde         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:19:33 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class Span
 
 	public:
 		Span(unsigned int N);
-		~Span();
 		Span(const Span &other);
 		Span& operator=(const Span &other);
+		~Span();
 
 		void addNumber(int num);
 		template <typename Iter>
